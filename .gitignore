@@ -1,2 +1,8 @@
 ### IntelliJ IDEA ###
 .idea
+
+### VS Code ###
+.vscode
+
+### node ###
+node_modules
