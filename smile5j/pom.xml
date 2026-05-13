@@ -7,11 +7,63 @@
     <groupId>com.smile.mall</groupId>
     <artifactId>smile-mall</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- 子模块定义 -->
+    <modules>
+        <!-- 管理模块 -->
+        <module>smile-mall-admin</module>
+        <!-- 系统模块 -->
+        <module>smile-mall-sys</module>
+        <!-- 公共工具 -->
+        <module>smile-mall-common</module>
+        <!-- 接口定义 -->
+        <module>smile-mall-api</module>
+        <!-- 数据模型 -->
+        <module>smile-mall-bean</module>
+        <!-- 业务模块 -->
+        <module>smile-mall-service</module>
+        <!-- 安全模块 -->
+        <module>smile-mall-security</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>3.4.2</spring-boot.version>
+        <spring-cloud-commons.version>4.2.0</spring-cloud-commons.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Spring Cloud 通用模块 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-commons</artifactId>
+                <version>${spring-cloud-commons.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Web 应用基础依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>
