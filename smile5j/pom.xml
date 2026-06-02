@@ -33,11 +33,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>3.4.2</spring-boot.version>
         <spring-cloud-commons.version>4.2.0</spring-cloud-commons.version>
+        <lombok.version>1.18.36</lombok.version>
     </properties>
 
+    <!-- 只是声明版本号，不会被子模块导入 -->
     <dependencyManagement>
         <dependencies>
 
+            <!-- 导入 Spring Boot 的依赖管理 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -56,7 +59,15 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 子模块继承 -->
     <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+            <version>${lombok.version}</version>
+        </dependency>
 
         <!-- Web 应用基础依赖 -->
         <dependency>

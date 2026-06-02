@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import http from '@/utils/http.js'
 import router from '@/router/index.js'
 import cookie from 'vue-cookies'
@@ -76,6 +76,11 @@ const dataRule = {
 const dataFormRef = ref(null)
 const verifyRef = ref(null)
 let isSubmit = false
+
+onMounted(() => {
+  getCaptcha()
+  document.addEventListener('keyup', handerKeyup)
+})
 
 const dataFormSubmit = () => {
   dataFormRef.value?.validate((valid) => {
@@ -104,6 +109,10 @@ const login = (verifyResult) => {
     })
 
   })
+}
+
+const getCaptCha = () => {
+  dataForm.value.captcha = getUUID()
 }
 </script>
 
