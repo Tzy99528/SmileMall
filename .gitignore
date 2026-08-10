@@ -8,4 +8,7 @@
 node_modules
 install.txt
 
+### MAC ###
+.DS_Store
+
 start.txt
