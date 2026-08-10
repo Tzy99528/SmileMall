@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.smile.mall.common.response.ServerResponseEntity;
 import com.smile.mall.sys.service.SysMenuService;
 
 import java.util.Map;
