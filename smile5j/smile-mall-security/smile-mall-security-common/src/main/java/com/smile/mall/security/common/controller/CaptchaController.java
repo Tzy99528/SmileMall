@@ -37,4 +37,16 @@ public class CaptchaController
         return ServerResponseEntity.success(captchaService.get(captchaVO));
     }
 
+    @PostMapping({ "/check" })
+    public ServerResponseEntity<ResponseModel> check(@RequestBody CaptchaVO captchaVO) 
+    {
+        ResponseModel responseModel;
+        try {
+            responseModel = captchaService.check(captchaVO);
+        }catch (Exception e) {
+            return ServerResponseEntity.success(ResponseModel.errorMsg(RepCodeEnum.API_CAPTCHA_COORDINATE_ERROR));
+        }
+        return ServerResponseEntity.success(responseModel);
+    }
+
 }
