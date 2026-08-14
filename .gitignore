@@ -12,3 +12,6 @@ install.txt
 .DS_Store
 
 start.txt
+
+### JAVA ###
+**/target/
