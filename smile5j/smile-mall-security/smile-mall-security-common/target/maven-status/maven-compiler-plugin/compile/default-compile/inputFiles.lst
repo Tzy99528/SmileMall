@@ -1,0 +1,16 @@
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/adapter/AuthConfigAdapter.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/adapter/CaptchaCacheServiceRedisImpl.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/adapter/DefaultAuthConfigAdapter.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/adapter/MallWebSecurityConfigurerAdapter.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/bo/TokenInfoBO.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/bo/UserInfoInTokenBO.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/config/CaptchaConfig.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/config/CorsConfig.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/controller/CaptchaController.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/dto/AuthenticationDTO.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/enums/SysTypeEnum.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/manager/PasswordCheckManager.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/manager/PasswordManager.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/manager/TokenStore.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/util/AuthUserContext.java
+/Users/tian/Desktop/ATian/Project/SmileMall/smile5j/smile-mall-security/smile-mall-security-common/src/main/java/com/smile/mall/security/common/vo/TokenInfoVO.java

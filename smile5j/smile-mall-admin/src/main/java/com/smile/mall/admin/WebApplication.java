@@ -7,10 +7,8 @@ import org.springframework.boot.SpringApplication;
 // 从 classpath 检测项目依赖的jar包，并根据对应的包自动创建相关对象并加载到Spring容器中 
 // 3. 自动扫描当前包及其子包下的所有组件（Controller, Service），并注册为Spring Bean 放进 Spring 容器中
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 // 可配置包扫描范围
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.smile.mall"})
@@ -18,7 +16,6 @@ public class WebApplication
 {
     public static void main(String[] args)
     {
-        ConfigurableApplicationContext ctx = SpringApplication.run(WebApplication.class, args);
-        ctx.getBeansWithAnnotation(RestController.class).forEach((k,v)-> System.out.println("RestController Bean:"+k));
+        SpringApplication.run(WebApplication.class, args);
     }
 }

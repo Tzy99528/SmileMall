@@ -35,9 +35,15 @@
         <spring-boot.version>3.4.2</spring-boot.version>
         <java.version>17</java.version>
         <spring-cloud-commons.version>4.2.0</spring-cloud-commons.version>
-        <lombok.version>1.18.34</lombok.version>
+        <mybatis-plus.version>3.5.10.1</mybatis-plus.version>
+        <lombok.version>1.18.36</lombok.version>
         <redisson.version>3.44.0</redisson.version>
         <springdoc.version>2.8.4</springdoc.version>
+        <hutool.version>5.8.35</hutool.version>
+        <satoken.version>1.40.0</satoken.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <mybatis-spring.version>3.0.3</mybatis-spring.version>
+        <transmittable-thread-local.version>2.14.5</transmittable-thread-local.version>
     </properties>
 
     <!-- 只是声明版本号，不会被子模块导入 -->
@@ -60,11 +66,6 @@
                 <version>${spring-cloud-commons.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-             </dependency>
 
             <!-- OpenAPI 支持 -->
             <dependency>
@@ -78,6 +79,36 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- 提供 MyBatis 与 Spring 框架的集成支持 -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+
+            <!-- 导入 MyBatis-Plus 的依赖管理 BOM -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>${mybatis-plus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Java 工具包大全 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!-- 解决线程池中线程上下文传递问题 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
             </dependency>
 
         </dependencies>
@@ -110,7 +141,15 @@
                     <encoding>${project.build.sourceEncoding}</encoding>    <!-- 设置源代码文件编码 -->
                     <!-- 设置为 true 时，编译器会保留方法参数名信息，使运行时可以通过反射获取参数名 -->
                     <parameters>true</parameters>
+                    <!-- lombok注解处理器，放在父pom，所有子模块继承生效 -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
+                
             </plugin>
 
             <!-- Spring Boot Maven 插件 -->

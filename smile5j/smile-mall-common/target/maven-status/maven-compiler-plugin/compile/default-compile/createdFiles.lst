@@ -1,2 +1,13 @@
 com/smile/mall/common/response/ResponseEnum.class
+com/smile/mall/common/response/ResponseCode.class
+com/smile/mall/common/util/HttpContextUtils.class
+com/smile/mall/common/response/ServerResponseEntity.class
+com/smile/mall/common/exception/SmileMallBindException.class
+com/smile/mall/common/util/RedisUtil.class
+com/smile/mall/common/util/IpHelper.class
+com/smile/mall/common/config/MybatisPlusConfig.class
+com/smile/mall/common/constants/OauthCacheNames.class
+com/smile/mall/common/util/SpringContextUtils.class
+com/smile/mall/common/config/RedisCacheConfig.class
 com/smile/mall/common/response/ServerResponse.class
+com/smile/mall/common/annotation/SysLog.class

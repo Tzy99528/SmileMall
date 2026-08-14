@@ -20,6 +20,13 @@
             <version>${smile.mall.version}</version>
         </dependency>
 
+        <!-- 系统相关模块 -->
+        <dependency>
+            <groupId>com.smile.mall</groupId>
+            <artifactId>smile-mall-sys</artifactId>
+            <version>${smile.mall.version}</version>
+        </dependency>
+
         <!-- Spring Cloud 的通用依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -31,6 +38,12 @@
             <groupId>com.anji-plus</groupId>
             <artifactId>captcha</artifactId>
             <version>1.3.0</version>
+        </dependency>
+
+        <!-- Java 工具包大全 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
         </dependency>
 
     </dependencies>
